@@ -1,0 +1,25 @@
+.container {
+    background: #e0cbf1;
+    margin: 55px auto;
+    width: 980px;
+    height: 500px;
+    border-radius: 3px; 
+}
+:root {
+    --primary-color: #5c585a;
+    --main-font: 'poppins', sans-serif;
+}
+h1 {
+font-size: 48px;
+color: var(--primary-color);
+font-family: var(--main-font);
+text-align: center;
+padding: 20px;
+}
+footer {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family: courier;
+    text-align: center;
+}
