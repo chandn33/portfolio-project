@@ -12,36 +12,33 @@ body {
 :root {
     --primary-color: #5c585a;
     --main-font: 'PT' Sans Narrow;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+.flowers {
+    text-align: center;
+    font-size: 20px;
+    color:#5c585a;
 }
 .back-home {
     text-align: center;
     font-size: 22px;
 }
-a:hover {
-  color: #5c585a;
-}
-button:hover {
-    color: var(--primary-color); 
-    background: #f3f2f2;
-}
-button {
-  background: #525bd6;
-  font-size: 13px;
+.main-menu {
+    display: inline-block;
+font-size: 15px;
   font-weight: bold;
   font-family: var(--main-font);
-  padding: 8px;
-  color: #f3f2f2;
-  border-radius: 18px;
-  border: 1px solid #5c585a;
-  box-shadow: var(--box-shadow);
+  color: #525bd6; 
+  padding: 20px;
   margin-right: auto;
-  cursor: pointer;
   margin-top: 60px;
-}
-.button-container {
   display: flex;
   justify-content: center;
+}
+a {
+   color: #525bd6;
+}
+a:hover {
+  color: #5c585a;
 }
 .information {
     text-align: center;
