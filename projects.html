@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,7 +18,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <title>Homepage</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -39,12 +42,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
-                 <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="projects.html">Projects</a>
             </li>
             <li class="nav-item">
@@ -56,21 +61,33 @@
     </nav>
 
     <div class="container">
-      <h1>Hello, my name is</h1>
-      <h2><strong>Chandni</strong></h2>
-      <h3>Student Front-end Developed - UK based</h3>
+        <div class="back-home">
+    <a href="index.html"><i class="fas fa-home"></i></a>
+    </div>
+      <h1><strong>My Projects</strong></h1>
 
-
-
-    <div class="button-container">
-    <a href="about.html"><button>About Me</button></a>
-       <a href="projects.html"><button>My Projects</button></a>
-        <a href="contact.html"><button>Contact Me</button></a>
+          <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4">
+            <a href="projects/hobby-project.html" target="_blank">
+          <img class="img-fluid" src="src/hobby-project.png"></a><div class="project-title">My Hobby</div>
+            </div>
+        <div class="col-sm-4">
+            <a href="projects/passion-project.html" target="_blank">
+            <img class="img-fluid" src="src/passion-project.png"></a><div class="project-title">My Passion</div>
+            </div>
+        <div class="col-sm-4">   
+             <a href="projects/world-clock-project.html" target="_blank">
+        <img class="img-fluid" src="src/world-clock-project.png"></a><div class="project-title">World Clock</div>
         </div>
 
-
-
-</div>
+      <div class="button-container">
+        <a href="about.html"><button>About Me</button></a>
+        <a href="contact.html"><button>Contact Me</button></a>
+      </div>
+    </div><br/>
+    <br/>
+    <br/>
     <footer>Coded by Chandni Patel🌻</footer>
   </body>
 </html>

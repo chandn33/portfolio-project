@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+
+    <title>World Clock Project</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <style>
+    body {
+        background: #d6cdf8;
+        font-family: arial;
+    }
+    a {
+        text-decoration: none;
+    }
+    .container {
+    max-width: 450px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    background: #edebf5;
+    }
+    h1 {
+        text-align: center;
+        color: #7857ec;
+        font-size: 36px;
+        margin: auto;
+    }
+    h2 {
+        color: #7857ec;
+        font-size: 24px;
+    }
+    select {
+        text-align: center;
+        width: 300px;
+        background: #dfd9f8;
+        color: #625d74;
+        font-weight: bold;
+        display: block;
+        padding: 5px;
+        margin: auto;
+        margin-top: 10px;
+        border: 1px solid #625d74;
+        border-radius: 5px;
+    }
+    .city {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dashed #cdcad6;
+        padding: 10px 0;
+    }
+    .time {
+        font-size: 36px;
+        color:#625d74;
+        font-weight: bold;
+        margin: 20px;
+    }
+    .date {
+        color:#625d74;
+        font-size: 15px;
+        line-height: 2px;
+    }
+    small {
+        font-size: 15px;
+        vertical-align: middle;
+    }
+    footer {
+        text-align: center;
+        font-family: courier;
+        color: #625d74;
+        font-size:14px;
+        font-weight: bold;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <a href="/">
+        <h1>World Clock</h1>
+      </a>
+      <select id="city">
+        <option value="">Select a City</option>
+        <option value="current">My current location</option>
+        <option value="Europe/London">London💂🏼</option>
+        <option value="Europe/Rome">Rome🏛️</option>
+        <option value="America/Los_Angeles">Las Vegas🎰</option>
+      </select>
+      <div id="cities">
+        <div class="city" id="manchester">
+          <div>
+            <h2>Manchester</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+
+        <div class="city" id="venice">
+          <div>
+            <h2>Venice</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+
+        <div class="city" id="new-york">
+          <div>
+            <h2>New York</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <script>
+      setInterval(function () {
+        let manchesterElement = document.querySelector("#manchester");
+        let manchesterDateElement = manchesterElement.querySelector(".date");
+        let manchesterTimeElement = manchesterElement.querySelector(".time");
+        let manchesterTime = moment().tz("Europe/London");
+
+        manchesterDateElement.innerHTML =
+          manchesterTime.format("dddd Do MMMM YYYY");
+        manchesterTimeElement.innerHTML = manchesterTime.format(
+          "h:mm:ss [<small>]A[</small>]"
+        );
+
+        let veniceElement = document.querySelector("#venice");
+        let veniceDateElement = veniceElement.querySelector(".date");
+        let veniceTimeElement = veniceElement.querySelector(".time");
+        let veniceTime = moment().tz("Europe/Rome");
+
+        veniceDateElement.innerHTML = veniceTime.format("dddd Do MMMM YYYY");
+        veniceTimeElement.innerHTML = veniceTime.format(
+          "h:mm:ss [<small>]A[</small>]"
+        );
+
+        let newYorkElement = document.querySelector("#new-york");
+        let newYorkDateElement = newYorkElement.querySelector(".date");
+        let newYorkTimeElement = newYorkElement.querySelector(".time");
+        let newYorkTime = moment().tz("America/New_York");
+
+        newYorkDateElement.innerHTML = newYorkTime.format("dddd Do MMMM YYYY");
+        newYorkTimeElement.innerHTML = newYorkTime.format(
+          "h:mm:ss [<small>]A[</small>]"
+        );
+
+        function updateCity(event) {
+          let cityTimeZone = event.target.value;
+          if (cityTimeZone === "current") {
+            cityTimeZone = moment.tz.guess();
+          }
+          let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+          let cityTime = moment().tz(cityTimeZone);
+          let citiesElement = document.querySelector("#cities");
+          citiesElement.innerHTML = `
+
+    <div class="city">
+    <div>
+    <h2>${cityName}</h2>
+    <div class="date">${cityTime.format("dddd Do MMMM YYYY")}</div>
+    </div>
+    <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
+    </div>
+    <br>
+<a href ="/">View cities</>
+    `;
+        }
+
+        let citiesSelectElement = document.querySelector("#city");
+
+        citiesSelectElement.addEventListener("change", updateCity);
+      }, 1000);
+    </script>
+
+    <footer>
+      Open sourced on
+      <a href="https://github.com/chandn33/world-clock" target="_blank">
+        GitHub</a
+      >
+      | Coded by Chandni Patel🌻
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

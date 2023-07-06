@@ -4,17 +4,19 @@ body {
 .container {
     background: #e0cbf1;
     margin: 58px auto;
-    width: 930px;
-    height: 400px;
+    margin-bottom: 10px;
+    width: 1000px;
+    height: 500px;
     border-radius: 2px; 
 }
 :root {
     --primary-color: #5c585a;
-    --main-font: 'poppins', sans-serif;
-     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    --main-font: 'PT' Sans Narrow;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 .back-home {
     text-align: center;
+    font-size: 22px;
 }
 a:hover {
   color: #5c585a;
@@ -24,20 +26,45 @@ button:hover {
     background: #f3f2f2;
 }
 button {
-  background: #3f48be;
+  background: #525bd6;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: var(--main-font);
   padding: 8px;
   color: #f3f2f2;
-  border-radius: 10px;
+  border-radius: 18px;
   border: 1px solid #5c585a;
   box-shadow: var(--box-shadow);
   margin-right: auto;
-  font-family: var(--main-font);
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 .button-container {
   display: flex;
   justify-content: center;
+}
+.information {
+    text-align: center;
+}
+.icons {
+    font-size: 30px;
+    text-align: center;
+}
+.project-title {
+    text-align: center;
+    font-family: var(--main-font);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+}
+.img-fluid {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: all 150ms linear;
+}
+.img-fluid:hover {
+transform: scale(1.3);
 }
 h1 {
 font-size: 35px;
@@ -47,14 +74,13 @@ text-align: center;
 padding: 35px;
 }
 h2 {
-    font-size: 45px;
-color: #3f48be;
+font-size: 45px;
+color: #525bd6;
 font-family: var(--main-font);
 text-align: center;
-font-weight: bold;
 }
 h3 {
-font-size: 28px;
+font-size: 26px;
 color: var(--primary-color);
 font-family: var(--main-font);
 text-align: center;
