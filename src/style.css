@@ -36,6 +36,12 @@ body {
     .ul {
         font-size: 12px;
     }
+    .main-menu {
+        font-size: 12px;
+    }
+        .column-item {
+            font-size: 12px;
+        }
 }
 .back-home {
     text-align: center;
