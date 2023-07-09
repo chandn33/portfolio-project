@@ -14,42 +14,6 @@ body {
     --primary-color: #5c585a;
     --main-font: 'PT' Sans Narrow;
 }
-@media (max-width: 800px) {
-    .container {
-        width: 100%;
-        height: auto;
-    }
-    h1 {
-        font-size:14px;
-    }
-    h2{
-        font-size:20px;
-    }
-    h3 {
-        font-size:10px;
-    }
-    .description {
-        display:none;
-    }
-    .icon {
-        font-size: 10px;
-    }
-    .form-group {
-        font-size: 12px;
-    }
-    .ul {
-        font-size: 10px;
-    }
-    .main-menu {
-        font-size: 10px;
-    }
-        .column-item {
-            font-size: 10px;
-        }
-        .img-fluid:hover {
-            pointer-events: none;
-        }
-}
 .back-home {
     text-align: center;
     font-size: 24px;
@@ -162,13 +126,46 @@ font-family: var(--main-font);
 text-align: center;
 padding: 35px;
 }
-#unique-footer {
-     margin-top: 140px !important;
-}
 footer {
     text-align: center;
     font-size: 14px;
     color: var(--primary-color);
     font-weight: bold;
     font-family: courier;
+}
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        font-size:14px;
+    }
+    h2{
+        font-size:20px;
+    }
+    h3 {
+        font-size:10px;
+    }
+    .description {
+        display:none;
+    }
+    .icon {
+        font-size: 10px;
+    }
+    .form-group {
+        font-size: 12px;
+    }
+    .ul {
+        font-size: 10px;
+    }
+    .main-menu {
+        font-size: 10px;
+    }
+        .column-item {
+            font-size: 10px;
+        }
+        .img-fluid:hover {
+            pointer-events: none;
+        }
 }
