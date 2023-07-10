@@ -168,4 +168,7 @@ footer {
         .img-fluid:hover {
             pointer-events: none;
         }
+        footer {
+            font-size: 12px;
+        }
 }
